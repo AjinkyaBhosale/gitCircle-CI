@@ -1,0 +1,11 @@
+dependencies:
+  pre:
+    - wget https://github.com/spf13/hugo/releases/download/v0.20.2/hugo_0.20.2-64bit.deb
+    - sudo dpkg -i hugo*.deb
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - git clone https://github.com/AjinkyaBhosale/gitCircle-CI.git themes/hugo-artists-theme
+      - hugo --theme=hugo-artists-theme --baseURL http://example.org/ --buildDrafts
