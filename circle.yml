@@ -4,11 +4,6 @@ dependencies:
     - sudo dpkg -i hugo*.deb
 
 deployment:
-  master:
-    branch: master
-    commands:
-      - hugo --theme=hugo-artists-theme --baseURL http://example.org/ --buildDrafts
-
   prod:
     branch: master
     commands:
