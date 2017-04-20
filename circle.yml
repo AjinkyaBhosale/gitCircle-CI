@@ -7,5 +7,9 @@ deployment:
   master:
     branch: master
     commands:
-      - git clone https://github.com/AjinkyaBhosale/gitCircle-CI.git themes/hugo-artists-theme
       - hugo --theme=hugo-artists-theme --baseURL http://example.org/ --buildDrafts
+
+  prod:
+    branch: master
+    commands:
+      - aws s3 sync AjinkyaBhosale/gitCircle-CI/ s3://amp-circle-ci/ --delete
