@@ -9,4 +9,4 @@ deployment:
     commands:
       - mkdir ${CIRCLE_ARTIFACTS}/ampush
       - cp -R /home/ubuntu/gitCircle-CI/public/ ${CIRCLE_ARTIFACTS}/ampush/
-      - aws s3 cp ${CIRCLE_ARTIFACTS}/ampush/ s3://amp-circle-ci/amp/ --recursive
+      - aws s3 cp ${CIRCLE_ARTIFACTS}/ampush/ s3://amp-circle-ci/amp/ --recursive --include "*"
