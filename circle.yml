@@ -7,4 +7,4 @@ deployment:
   prod:
     branch: master
     commands:
-      - aws s3 sync AjinkyaBhosale/gitCircle-CI/public/* s3://amp-circle-ci/amp/ --delete
+      - aws s3 cp -r /home/ubuntu/gitCircle-CI/public/* s3://amp-circle-ci/amp/ --delete
