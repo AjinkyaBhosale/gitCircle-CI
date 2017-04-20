@@ -12,4 +12,4 @@ deployment:
   prod:
     branch: master
     commands:
-      - aws s3 sync AjinkyaBhosale/gitCircle-CI/ s3://amp-circle-ci/ --delete
+      - aws s3 sync AjinkyaBhosale/gitCircle-CI/ s3://amp-circle-ci/amp/ --delete
