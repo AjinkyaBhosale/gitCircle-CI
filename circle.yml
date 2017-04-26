@@ -7,6 +7,7 @@ deployment:
   prod:
     branch: master
     commands:
+      - hugo
       - mkdir ${CIRCLE_ARTIFACTS}/ampush
       - cp -R /home/ubuntu/gitCircle-CI/public/ ${CIRCLE_ARTIFACTS}/ampush/
       - aws s3 cp ${CIRCLE_ARTIFACTS}/ampush/public/. s3://amp-circle-ci/newamp/ --recursive --include "*" --region ap-south-1
